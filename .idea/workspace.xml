@@ -4,7 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="00b83cd9-1c93-47d3-a781-856189ad8518" name="Changes" comment="init" />
+    <list default="true" id="00b83cd9-1c93-47d3-a781-856189ad8518" name="Changes" comment="init">
+      <change afterPath="$PROJECT_DIR$/pr2/task1/dirty_read/tr1.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pr2/task1/dirty_read/tr2.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pr2/task1/func.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pr2/task1/init.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pr2/task1/phantom_read/read_committed/tr1.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pr2/task1/phantom_read/read_committed/tr2.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pr2/task1/repeatable_read/create_table/tr1.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pr2/task1/repeatable_read/create_table/tr2.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pr2/task1/repeatable_read/drop_table/tr1.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pr2/task1/repeatable_read/drop_table/tr2.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pr2/task1/repeatable_read/task4/tr1.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pr2/task1/repeatable_read/task4/tr2.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pr2/task1/serialization/transfer_funds_tr1.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pr2/task1/serialization/transfer_funds_tr2.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pr2/task2/ctid.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pr2/task2/init.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pr2/task3/hot.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pr2/task3/init.sql" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,18 +33,21 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2LhMiZlZVQsx9VBinnriNYxtUQT" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.OpenDatabaseViewOnStart": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "database.data.extractors.current.export.id": "Comma-separated (CSV)_id",
-    "last_opened_file_path": "C:/Users/R/DataGripProjects/dbsp practicies",
+    "last_opened_file_path": "C:/Users/R",
     "settings.editor.selected.configurable": "vcs.Git",
     "sql.codeStylePanel.last.previewDialect": "PostgreSQL"
   },
@@ -68,6 +90,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="init" />
     <option name="LAST_COMMIT_MESSAGE" value="init" />
   </component>
