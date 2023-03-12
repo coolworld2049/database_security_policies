@@ -28,9 +28,11 @@ $$
 begin
     for i in 1..count
         loop
-            perform pg_sleep(1);
-            perform update_random_rows(percent);
-            raise notice 'iter=%, update_random_rows(percent=%)', i, percent;
+            begin
+                perform pg_sleep(1);
+                perform update_random_rows(percent);
+                raise notice 'iter=%, update_random_rows(percent=%)', i, percent;
+            end;
         end loop;
 end;
 $$ language plpgsql;

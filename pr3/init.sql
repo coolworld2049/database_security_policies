@@ -17,3 +17,11 @@ begin
     insert into users(username, email, category) select 'AxAAA', 'AxAAA', _category from generate_series(1, count);
 end;
 $$ language plpgsql;
+
+create or replace function random_between(low bigint, high bigint)
+    returns int as
+$$
+begin
+    return floor(random() * (high - low + 1) + low);
+end;
+$$ language 'plpgsql' strict;

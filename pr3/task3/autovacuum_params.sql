@@ -5,6 +5,7 @@ alter table users
         autovacuum_vacuum_scale_factor = 0.1
         );
 
+alter system set autovacuum_naptime = '1s';
 
 show autovacuum_naptime;
 
@@ -18,7 +19,8 @@ select repeat_update_random_rows(percent := 0.05, count := 20);
 
 select pg_size_pretty(pg_table_size('users'));
 
-select vacuum_count
+select autovacuum_count
 from pg_stat_all_tables
 where relname = 'users';
 
+alter system set autovacuum_naptime = '1min';
