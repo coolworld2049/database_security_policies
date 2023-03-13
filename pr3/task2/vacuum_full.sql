@@ -1,4 +1,7 @@
-alter table users set (autovacuum_enabled = false);
+create extension if not exists pgstattuple;
+
+alter table users
+    set (autovacuum_enabled = false);
 
 truncate table users;
 
@@ -6,6 +9,8 @@ select fill_users_table();
 
 select pg_size_pretty(pg_table_size('users'));
 
+select *
+from pgstattuple('users');
 
 do
 $$
@@ -26,3 +31,5 @@ vacuum full verbose users;
 
 select pg_size_pretty(pg_table_size('users'));
 
+select *
+from pgstattuple('users');

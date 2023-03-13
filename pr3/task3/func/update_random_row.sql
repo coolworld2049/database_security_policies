@@ -1,38 +1,18 @@
-create or replace function update_random_rows(percent float = 0.05) returns void as
+create or replace procedure repeat_update_random_rows(percent float = 0.05, count int = 20) as
 $$
-declare
-    min_id  integer = (select min(id)
-                       from users);
-    max_id  integer = (select max(id)
-                       from users);
-    _offset integer = (max_id * percent)::integer;
-    start   integer;
-    stop    integer;
 begin
-    start = min_id + _offset * random_between(min_id, (percent * 100)::integer);
-    stop = start + _offset;
-    raise notice 'percent=%, start=%, stop=%, _offset=%', percent, start, stop, _offset;
-    for i in start..stop
+    for i in 0..count
         loop
+            perform pg_sleep(2);
+            raise notice 'sleep %', 2;
+
             update users
-            set username = reverse(username)
-            where id = i;
-        end loop;
-end;
-$$ language plpgsql;
+            set username = random_string(100)
+            where random() < percent;
 
+            commit;
 
-create or replace function repeat_update_random_rows(percent float = 0.05, count int = 20)
-    returns void as
-$$
-begin
-    for i in 1..count
-        loop
-            begin
-                perform pg_sleep(1);
-                perform update_random_rows(percent);
-                raise notice 'iter=%, update_random_rows(percent=%)', i, percent;
-            end;
+            raise notice 'iter=%, update_random_rows(percent=%)', i, percent;
         end loop;
 end;
 $$ language plpgsql;
